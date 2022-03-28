@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
- function Card({ Name  }) {
+ function Card({Name}) {
     return (
       <View style={styles.cardView}>
         <Text>Nombre: {Name}</Text>
@@ -11,7 +11,7 @@ import { StyleSheet, Text, View } from 'react-native';
   const styles=StyleSheet.create({ 
    
              cardView: {
-        backgroundColor: "white",
+        backgroundColor: "grey",
         borderRadius: 20,
         marginVertical:5,
         marginHorizontal:9,
