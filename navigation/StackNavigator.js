@@ -1,7 +1,7 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 
-import Home from "../screens/Home.tsx";
+import Home from "../screens/Home";
 import About from "../screens/About";
 import Servicios from "../screens/Servicios";
 import MyServices  from "../screens/MyServices";
