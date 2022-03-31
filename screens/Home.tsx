@@ -1,24 +1,28 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useEffect, useState } from 'react';
-import { StyleSheet, FlatList ,Text, View } from 'react-native';
+import { ActivityIndicator, StyleSheet, FlatList ,Text, View } from 'react-native';
 import axios from 'axios'
-const URL='http://10.0.2.2:8000/api/categoryy'
-
+const URL = 'http://192.168.1.126:8000/api/category'
 //components
 import Card from '../components/Card'
  function Home() {
-  const [ listaLibros, setlistalibro ] = useState([])
+  const [data, setData] = useState([]);
+  
+  const [isLoading, setLoading] = useState(true);
+  // const [ datalista, setlistalibro ] = useState([])
   useEffect(() => {
     getlibros()
   },[])
-
   const getlibros = async () => {
-    const { data }= await axios.get(URL)
-    const { libros } = data
-    setlistalibro(libros)
-    console.log(data)
-                   
+    axios.get(URL)
+    .then(({data}) => {
+      console.log(data)
+      setData(data)
+    })
+    .catch((error) => console.error(error))
+      .finally(() => setLoading(false));
   }
+  
     const renderItem = ({ item }) => (
       <Card Name={item.Name}  />)
       return (
@@ -27,14 +31,14 @@ import Card from '../components/Card'
           <Text style={styles.title}>Libros</Text>
           </View>
           <FlatList
-            data={listaLibros}
+            data={data}
             renderItem={renderItem}
             keyExtractor={item => item.id_category.toString()}
           />
           <StatusBar style="auto" />
         </View>
       );
-      }
+}
       const styles = StyleSheet.create({
         container: {
           flex: 1,
