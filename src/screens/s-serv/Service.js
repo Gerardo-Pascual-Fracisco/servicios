@@ -1,10 +1,10 @@
 import React from "react";
 import { View, StyleSheet, Text } from "react-native";
 
-const Search = () => {
+const Service = () => {
   return (
     <View style={styles.center}>
-      <Text>Mis Servicios</Text>
+      <Text>Servicios</Text>
     </View>
   );
 };
@@ -18,4 +18,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Search;
+export default Service;

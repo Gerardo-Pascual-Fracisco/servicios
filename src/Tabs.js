@@ -2,6 +2,8 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeStackNavigator from './stack/HomeStackScreen';
 import SettingStackNavigator from './stack/SettingStackScreen';
+import ServiceStackNavigator from './stack/ServiceStackScreen';
+import SearchStackNavigator from './stack/SearchStackScreen';
 import { NavigationContainer } from "@react-navigation/native";
 import Icon from "react-native-vector-icons/FontAwesome"
 import Icon2 from 'react-native-vector-icons/MaterialIcons';
@@ -33,7 +35,7 @@ const Tabs = () => {
                     }}
                 />                
                 <Tab.Screen name="Busqueda"
-                    component={HomeStackNavigator}
+                    component={SearchStackNavigator}
                     options={{
                         tabBarLabel: 'Busqueda',
                         tabBarIcon: ({ color, size }) => (
@@ -42,7 +44,7 @@ const Tabs = () => {
                     }}
                 />
                 <Tab.Screen name="Gestor de Servicios"
-                    component={HomeStackNavigator}
+                    component={ServiceStackNavigator}
                     options={{
                         tabBarLabel: 'Servicios',
                         tabBarIcon: ({ color, size }) => (

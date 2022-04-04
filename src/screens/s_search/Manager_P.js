@@ -1,10 +1,10 @@
 import React from "react";
 import { View, StyleSheet, Text } from "react-native";
 
-const Servicios = () => {
+const Manager_P = () => {
   return (
     <View style={styles.center}>
-      <Text>Servicios</Text>
+      <Text>Mis Servicios</Text>
     </View>
   );
 };
@@ -18,4 +18,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Servicios;
+export default Manager_P;

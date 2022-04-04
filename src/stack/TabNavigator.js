@@ -7,7 +7,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
 
 import Home from "../screens/s_hom/Home";
-import Servicios from "../screens/s-serv/Servicios";
+import Servicios from "../screens/s-serv/Service";
 import MyServices  from "../screens/s_search/Search";
 import Setting from "../screens/s-conf/Setting";
 import Perfil from "../screens/s-conf/Profile_C";
